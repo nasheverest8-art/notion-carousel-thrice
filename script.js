@@ -3,8 +3,6 @@ const slides = document.querySelectorAll(".slide");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const dotsContainer = document.querySelector(".dots");
-const fullscreenBtn = document.querySelector(".fullscreen-btn");
-const wrapper = document.querySelector(".carousel-wrapper");
 
 let currentIndex = 0;
 
@@ -64,19 +62,6 @@ document.addEventListener("keydown", (e) => {
         prevBtn.click();
     }
 
-    if (e.key === "f") {
-        toggleFullscreen();
-    }
+
 });
 
-// Fullscreen
-
-fullscreenBtn.addEventListener("click", toggleFullscreen);
-
-function toggleFullscreen() {
-    if (!document.fullscreenElement) {
-        wrapper.requestFullscreen();
-    } else {
-        document.exitFullscreen();
-    }
-}
