@@ -24,7 +24,7 @@ body {
 
 .carousel-view {
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 0px;
 }
 
 .carousel-track {
@@ -36,7 +36,7 @@ body {
     min-width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 17px;
+    border-radius: 0px;
     user-select: none;
 }
 
