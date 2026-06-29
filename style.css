@@ -36,10 +36,7 @@ body {
     min-width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 0px;
-    user-select: none;
 }
-
 .nav-btn,
 .fullscreen-btn {
     border: none;
@@ -142,6 +139,19 @@ body {
 
 @media (max-width: 768px) {
 
+    .nav-btn,
+    .fullscreen-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+    
+   .slide {
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+        background: white;
+    }
+    
     body {
         padding: 0;
     }
