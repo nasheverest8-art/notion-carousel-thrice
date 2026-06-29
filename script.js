@@ -61,7 +61,82 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") {
         prevBtn.click();
     }
+const fullscreen = document.getElementById("fullscreen");
+const fullscreenImage =
+    document.getElementById("fullscreenImage");
 
+const fullscreenPrev =
+    document.querySelector(".fullscreen-prev");
+
+const fullscreenNext =
+    document.querySelector(".fullscreen-next");
+
+const fullscreenClose =
+    document.querySelector(".fullscreen-close");
+
+
+// Open fullscreen when image clicked
+
+slides.forEach((slide, index) => {
+    slide.addEventListener("click", () => {
+        currentIndex = index;
+        updateFullscreen();
+        fullscreen.classList.add("active");
+    });
+});
+
+function updateFullscreen() {
+    fullscreenImage.src =
+        slides[currentIndex].src;
+}
+
+// Fullscreen navigation
+
+fullscreenNext.addEventListener("click", () => {
+    currentIndex =
+        (currentIndex + 1) % slides.length;
+
+    updateFullscreen();
+});
+
+fullscreenPrev.addEventListener("click", () => {
+    currentIndex =
+        (currentIndex - 1 + slides.length) % slides.length;
+
+    updateFullscreen();
+});
+
+// Close
+
+fullscreenClose.addEventListener("click", () => {
+    fullscreen.classList.remove("active");
+});
+
+// Click dark area to close
+
+fullscreen.addEventListener("click", (e) => {
+    if (e.target === fullscreen) {
+        fullscreen.classList.remove("active");
+    }
+});
+
+// Keyboard controls while fullscreen is open
+
+document.addEventListener("keydown", (e) => {
+    if (!fullscreen.classList.contains("active")) return;
+
+    if (e.key === "Escape") {
+        fullscreen.classList.remove("active");
+    }
+
+    if (e.key === "ArrowRight") {
+        fullscreenNext.click();
+    }
+
+    if (e.key === "ArrowLeft") {
+        fullscreenPrev.click();
+    }
+});
 
 });
 
