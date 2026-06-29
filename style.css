@@ -149,11 +149,17 @@ body {
 }
 
 .carousel-wrapper:fullscreen .nav-btn {
-    width: 64px;
-    height: 64px;
-    align-self: center;
-
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 100;
+}
+.carousel-wrapper:fullscreen .prev {
+    left: 20px;
+}
+
+.carousel-wrapper:fullscreen .next {
+    right: 20px;
 }
 
 .carousel-wrapper:fullscreen .controls {
