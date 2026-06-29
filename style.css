@@ -142,10 +142,20 @@ body {
 
 @media (max-width: 768px) {
 
-    .carousel-container {
-        grid-template-columns: 55px 1fr 55px;
-        gap: 10px;
+    body {
+        padding: 0;
     }
+
+    .carousel-wrapper {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .carousel-container {
+        grid-template-columns: 50px 1fr 50px;
+        gap: 8px;
+    }
+}
 
     .nav-btn {
         width: 46px;
