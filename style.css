@@ -80,10 +80,11 @@ body {
 }
 
 .fullscreen-btn {
-    padding: 12px 22px;
-    font-size: 0.95rem;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    font-size: 1.4rem;
 }
-
 .dots {
     display: flex;
     gap: 12px;
