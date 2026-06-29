@@ -9,19 +9,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f4f4f4;
+    background: #ffffff;
     font-family: sans-serif;
     padding: 40px;
 }
 
-.carousel-wrapper {
-    width: min(1000px, 95vw);
-    background: white;
-    border-radius: 17px;
-    padding: 30px;
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.08);
-}
 
 .carousel-container {
     display: grid;
