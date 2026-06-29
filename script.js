@@ -79,4 +79,29 @@ function toggleFullscreen() {
     } else {
         document.exitFullscreen();
     }
+    let startX = 0;
+let endX = 0;
+
+const view = document.querySelector(".carousel-view");
+
+view.addEventListener("touchstart", e => {
+    startX = e.changedTouches[0].screenX;
+});
+
+view.addEventListener("touchend", e => {
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const threshold = 50;
+
+    if (startX - endX > threshold) {
+        nextBtn.click();
+    }
+
+    if (endX - startX > threshold) {
+        prevBtn.click();
+    }
+}
 }
